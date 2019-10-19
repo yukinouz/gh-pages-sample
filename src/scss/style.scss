@@ -1,0 +1,259 @@
+@import "_reset";
+@import "_responsive";
+@import "_flexbox";
+
+$blue01: #1f91be;
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 100px;
+  width: 100%;
+  @include mq-max(w750) {
+    padding: 0 15px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  @include mq-max(w750) {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+.gnav-wrapper {
+  @include _flex(between);
+  align-items: center;
+  @include mq-max(w750) {
+    display: block;
+  }
+}
+
+.gnav {
+  &-ttl {
+    line-height: 1;
+    a {
+      color: $blue01;
+      font-size: 3.1rem;
+      font-weight: bold;
+      @include mq-max(w750) {
+        font-size: 4.8vw;
+      }
+    }
+  }
+  &-list {
+    @include _flex;
+    @include mq-max(w750) {
+      margin-top: 10px;
+    }
+    li {
+      padding-left: 30px;
+      @include mq-max(w750) {
+        padding-left: 12px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.top-content {
+  @include _flex(between);
+  margin-top: 100px;
+  @include mq-max(w750) {
+    display: block;
+    margin-top: 40px;
+  }
+}
+.main {
+  width: 64.814814815%;
+  @include mq-max(w750) {
+    width: 100%;
+  }
+}
+
+.about {
+  &-ttl {
+    border-bottom: 4px solid $blue01;
+    color: $blue01;
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    @include mq-max(w750) {
+      font-size: 5.87vw;
+    }
+  }
+  &-content {
+    @include _flex(wrap);
+    margin-top: 30px;
+    @include mq-max(w750){
+      margin-top: 0;
+    }
+  }
+  &-item {
+    width: calc(50% - 60px / 2);
+    margin-left: 60px;
+    @include mq-max(w750) {
+      width: 100%;
+      margin: 20px 0 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &-img {
+    @include mq-max(w750) {
+      text-align: center;
+    }
+  }
+  &-txt {
+    margin-top: 30px;
+  }
+}
+
+.news {
+  margin-top: 70px;
+  @include mq-max(w750){
+    margin-top: 60px;
+  }
+  &-ttl {
+    border-bottom: 4px solid $blue01;
+    color: $blue01;
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    @include mq-max(w750) {
+      font-size: 5.87vw;
+    }
+  }
+  &-dl {
+    @include _flex(wrap);
+    margin-top: 10px;
+    @include mq-max(w750) {
+      display: block;
+      margin-top: 0;
+    }
+    dt {
+      border-bottom: 1px solid #6f6f6f;
+      font-size: 1.4rem;
+      font-weight: bold;
+      min-width: 100px;
+      padding-top: 20px;
+      width: calc(20% - 48px / 2);
+      @include mq-max(w750) {
+        border-bottom: none;
+        font-size: 3.73vw;
+        width: 100%;
+      }
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    dd {
+      border-bottom: 1px solid #6f6f6f;
+      font-size: 1.4rem;
+      padding: 20px 0 20px 48px;
+      width: calc(80% - 48px / 2);
+      @include mq-max(w750) {
+        font-size: 3.73vw;
+        padding: 10px 0 20px;
+        width: 100%;
+      }
+      &:last-of-type {
+        border-bottom: none;
+        @include mq-max(w750) {
+          border-bottom: 1px solid #6f6f6f;
+        }
+      }
+    }
+  }
+  &-btn{
+    margin-top: 20px;
+    a{
+      @include _flex(center);
+      align-items: center;
+      border: 2px solid $blue01;
+      color: $blue01;
+      height: 32px;
+      margin-left: auto;
+      width: 148px;
+      @include mq-max(w750){
+        height: 40px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.sidebar {
+  width: 27.777777778%;
+  @include mq-max(w750) {
+    margin-top: 60px;
+    width: 100%;
+  }
+  &-img {
+    margin-top: 30px;
+    text-align: center;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.cat {
+  margin-top: 40px;
+  @include mq-max(w750) {
+    margin-top: 58px;
+  }
+  &-ttl {
+    border-bottom: 4px solid $blue01;
+    color: $blue01;
+    font-size: 3.2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    @include mq-max(w750) {
+      font-size: 5.87vw;
+    }
+  }
+  &-list {
+    margin-top: 30px;
+    li {
+      margin-top: 15px;
+    }
+    a {
+      font-weight: bold;
+      position: relative;
+      padding-left: 20px;
+      &:after {
+        content: "・";
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+.footer{
+  @include _flex(center);
+  align-items: center;
+  background: #C7C7C7;
+  height: 50px;
+  margin-top: 120px;
+  @include mq-max(w750){
+    height: 40px;
+  }
+  &-txt{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    @include mq-max(w750){
+      font-size: 2.67vw;
+    }
+  }
+}
