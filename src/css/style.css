@@ -307,7 +307,12 @@ button {
 
 .news-list {
   display: flex;
-  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  .news-list {
+    display: block;
+  }
 }
 
 .news-list:not(:last-of-type) {
