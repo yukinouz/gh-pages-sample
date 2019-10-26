@@ -168,14 +168,14 @@ button {
   font-weight: bold;
 }
 
-.top-content {
+.wp-content {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
 }
 
 @media screen and (max-width: 750px) {
-  .top-content {
+  .wp-content {
     display: block;
     margin-top: 40px;
   }
@@ -218,8 +218,8 @@ button {
 }
 
 .about-item {
-  width: calc(50% - 60px / 2);
-  margin-left: 60px;
+  width: calc(50% - 4.6875vw / 2);
+  margin-left: 4.6875vw;
 }
 
 @media screen and (max-width: 750px) {
@@ -268,44 +268,33 @@ button {
 }
 
 .news-dl {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 
 @media screen and (max-width: 750px) {
   .news-dl {
-    display: block;
     margin-top: 0;
   }
 }
 
 .news-dl dt {
-  border-bottom: 1px solid #6f6f6f;
   font-size: 1.4rem;
   font-weight: bold;
-  min-width: 100px;
+  min-width: 115px;
   padding-top: 20px;
-  width: calc(20% - 48px / 2);
 }
 
 @media screen and (max-width: 750px) {
   .news-dl dt {
-    border-bottom: none;
     font-size: 3.73vw;
     width: 100%;
   }
 }
 
-.news-dl dt:last-of-type {
-  border-bottom: none;
-}
-
 .news-dl dd {
-  border-bottom: 1px solid #6f6f6f;
   font-size: 1.4rem;
-  padding: 20px 0 20px 48px;
-  width: calc(80% - 48px / 2);
+  padding: 20px 0;
+  margin-left: 3.75vw;
 }
 
 @media screen and (max-width: 750px) {
@@ -316,14 +305,13 @@ button {
   }
 }
 
-.news-dl dd:last-of-type {
-  border-bottom: none;
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 750px) {
-  .news-dl dd:last-of-type {
-    border-bottom: 1px solid #6f6f6f;
-  }
+.news-list:not(:last-of-type) {
+  border-bottom: 1px solid #6f6f6f;
 }
 
 .news-btn {
