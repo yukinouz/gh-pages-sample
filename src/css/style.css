@@ -301,6 +301,7 @@ button {
   .news-dl dd {
     font-size: 3.73vw;
     padding: 10px 0 20px;
+    margin-left: 0;
     width: 100%;
   }
 }
