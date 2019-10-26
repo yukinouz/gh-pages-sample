@@ -331,8 +331,10 @@ button {
 
 @media screen and (max-width: 750px) {
   .news-btn a {
-    height: 40px;
+    font-size: 3.73vw;
+    height: 10.7vw;
     margin: 0 auto;
+    width: 39.5vw;
   }
 }
 
