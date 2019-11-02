@@ -87,10 +87,16 @@ button {
 }
 
 .inner {
-  max-width: 1280px;
+  max-width: 100%;
+  width: 1080px;
   margin: 0 auto;
   padding: 0 100px;
-  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .inner {
+    padding: 0 7.8125%;
+  }
 }
 
 @media screen and (max-width: 750px) {
